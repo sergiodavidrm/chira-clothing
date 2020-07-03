@@ -1,0 +1,28 @@
+Create App
+*npx create-reat-app appName
+
+git clone https://github.com/sergio99/monsters-rolodex.git
+yarn add gh-pages
+yarn deploy
+git add -A
+git commit -m "Adding files for github pages"
+git push
+
+ yarn add node-sass
+yarn add react-router-dom
+yarn add redux redux-logger react-redux
+ yarn add reselect
+yarn add redux-persist
+
+use stripe
+yarn add react-stripe-checkout
+
+install heroku
+heroku login
+
+heroku create chiracln-live --buildpack https://github.com/mars/create-react-app-buildpack.git
+git push heroku master
+
+yarn add styled-components
+
+yarn add redux-thunk

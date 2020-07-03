@@ -28,20 +28,20 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    // const { setCurrentUser, collectionsArray } = this.props;
-    const { setCurrentUser } = this.props;
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
-      if (userAuth) {
-        const userRef = await createUserProfileDocument(userAuth);
+     const { setCurrentUser, collectionsArray } = this.props;
+    // const { setCurrentUser } = this.props;
+    // this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+    //   if (userAuth) {
+    //     const userRef = await createUserProfileDocument(userAuth);
 
-        userRef.onSnapshot((snapShot) => {
-          setCurrentUser({
-            id: snapShot.id,
-            ...snapShot.data(),
-          });
-        });
-      }
-      setCurrentUser(userAuth);
+    //     userRef.onSnapshot((snapShot) => {
+    //       setCurrentUser({
+    //         id: snapShot.id,
+    //         ...snapShot.data(),
+    //       });
+    //     });
+    //   }
+    //   setCurrentUser(userAuth);
       //code used to create the collections in firestore
       // addCollectionAndDocuments(
       //   "collections",
@@ -51,7 +51,7 @@ class App extends React.Component {
       // this.setState({ currentUser: user });
 
       // console.log(user);
-    });
+    // });
   }
 
   componentWillUnmount() {
