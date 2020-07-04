@@ -1,21 +1,11 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { createStructuredSelector } from "reselect";
+
 import CollectionsOverviewContainer from "../../components/collections-overview/collections-overview.container";
 import CollectionPageContainer from "../collection/collection.container";
 
 import { connect } from "react-redux";
 import { fetchCollectionsStart } from "../../redux/shop/shop.actions";
-import {
-  selectIsCollectionsLoaded,
-} from "../../redux/shop/shop.selectors";
-
-import WithSpinner from "../../components/with-spinner/with-spinner.component";
-
-import {
-  firestore,
-  convertCollectionsSnapshotToMap,
-} from "../../firebase/firebase.utils";
 
 // const ShopPage = ({ match }) => (
 //   <div className='shop-page'>
